@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import app from "./app.js";
 
-dotenv.config(); // ✅ MUST BE FIRST
+dotenv.config();
 
 const PORT = process.env.PORT || 5000;
 
