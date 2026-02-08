@@ -1,6 +1,6 @@
 # 📱 VTU Backend Project
 
-A robust and secure backend API for a Virtual Top-Up (VTU) application. This system handles user authentication, wallet management, and service purchases (Airtime & Data) using the DataStation API.
+This system handles user authentication, wallet management, and service purchases (Airtime & Data) using the DataStation API.
 
 ---
 
@@ -60,11 +60,6 @@ The server will start at `http://localhost:5000`.
 
 ---
 
-## 📚 API Documentation
-A complete Postman Collection is included in the project: `vtu-api.postman_collection.json`.
-Import this file into Postman to test all endpoints (Auth, Wallet, Data, Airtime).
-
----
 
 ## 🚂 Deployment Guide (Railway)
 
