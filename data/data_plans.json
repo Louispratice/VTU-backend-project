@@ -1,0 +1,850 @@
+[
+    {
+        "id": 183,
+        "network": "9MOBILE",
+        "plan_type": "CORPORATE GIFTING",
+        "amount": 300.0,
+        "size": "1.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 184,
+        "network": "9MOBILE",
+        "plan_type": "CORPORATE GIFTING",
+        "amount": 450.0,
+        "size": "1.5 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 185,
+        "network": "9MOBILE",
+        "plan_type": "CORPORATE GIFTING",
+        "amount": 600.0,
+        "size": "2.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 186,
+        "network": "9MOBILE",
+        "plan_type": "CORPORATE GIFTING",
+        "amount": 900.0,
+        "size": "3.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 188,
+        "network": "9MOBILE",
+        "plan_type": "CORPORATE GIFTING",
+        "amount": 1500.0,
+        "size": "5.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 189,
+        "network": "9MOBILE",
+        "plan_type": "CORPORATE GIFTING",
+        "amount": 3000.0,
+        "size": "10.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 221,
+        "network": "9MOBILE",
+        "plan_type": "CORPORATE GIFTING",
+        "amount": 150.0,
+        "size": "500.0 MB",
+        "validity": "30 days"
+    },
+    {
+        "id": 229,
+        "network": "9MOBILE",
+        "plan_type": "CORPORATE GIFTING",
+        "amount": 6000.0,
+        "size": "20.0 GB",
+        "validity": "Monthly"
+    },
+    {
+        "id": 265,
+        "network": "9MOBILE",
+        "plan_type": "CORPORATE GIFTING",
+        "amount": 1200.0,
+        "size": "4.0 GB",
+        "validity": "30 day"
+    },
+    {
+        "id": 283,
+        "network": "AIRTEL",
+        "plan_type": "SME",
+        "amount": 3014.0,
+        "size": "10.0 GB",
+        "validity": "Monthly"
+    },
+    {
+        "id": 310,
+        "network": "AIRTEL",
+        "plan_type": "SME",
+        "amount": 55.0,
+        "size": "150.0 MB",
+        "validity": "1 day"
+    },
+    {
+        "id": 313,
+        "network": "AIRTEL",
+        "plan_type": "SME",
+        "amount": 1014.0,
+        "size": "3.0 GB",
+        "validity": "7 days"
+    },
+    {
+        "id": 360,
+        "network": "AIRTEL",
+        "plan_type": "SME",
+        "amount": 340.0,
+        "size": "1.0 GB",
+        "validity": "3 days (Social)"
+    },
+    {
+        "id": 372,
+        "network": "AIRTEL",
+        "plan_type": "SME",
+        "amount": 514.0,
+        "size": "500.0 MB",
+        "validity": "7 days"
+    },
+    {
+        "id": 373,
+        "network": "AIRTEL",
+        "plan_type": "SME",
+        "amount": 814.0,
+        "size": "1.0 GB",
+        "validity": "7 days"
+    },
+    {
+        "id": 375,
+        "network": "AIRTEL",
+        "plan_type": "SME",
+        "amount": 1514.0,
+        "size": "2.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 376,
+        "network": "AIRTEL",
+        "plan_type": "SME",
+        "amount": 2014.0,
+        "size": "3.0 GB",
+        "validity": "30days"
+    },
+    {
+        "id": 377,
+        "network": "AIRTEL",
+        "plan_type": "SME",
+        "amount": 2514.0,
+        "size": "4.0 GB",
+        "validity": "30days"
+    },
+    {
+        "id": 378,
+        "network": "AIRTEL",
+        "plan_type": "SME",
+        "amount": 3014.0,
+        "size": "8.0 GB",
+        "validity": "30days"
+    },
+    {
+        "id": 379,
+        "network": "AIRTEL",
+        "plan_type": "SME",
+        "amount": 3014.0,
+        "size": "10.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 380,
+        "network": "AIRTEL",
+        "plan_type": "SME",
+        "amount": 5014.0,
+        "size": "13.0 GB",
+        "validity": "30days"
+    },
+    {
+        "id": 381,
+        "network": "AIRTEL",
+        "plan_type": "SME",
+        "amount": 6014.0,
+        "size": "18.0 GB",
+        "validity": "7days"
+    },
+    {
+        "id": 382,
+        "network": "AIRTEL",
+        "plan_type": "SME",
+        "amount": 8014.0,
+        "size": "25.0 GB",
+        "validity": "30days"
+    },
+    {
+        "id": 383,
+        "network": "AIRTEL",
+        "plan_type": "SME",
+        "amount": 10014.0,
+        "size": "35.0 GB",
+        "validity": "30days"
+    },
+    {
+        "id": 384,
+        "network": "AIRTEL",
+        "plan_type": "SME",
+        "amount": 15014.0,
+        "size": "60.0 GB",
+        "validity": "30days"
+    },
+    {
+        "id": 385,
+        "network": "AIRTEL",
+        "plan_type": "CORPORATE GIFTING",
+        "amount": 20014.0,
+        "size": "100.0 GB",
+        "validity": "30days"
+    },
+    {
+        "id": 386,
+        "network": "AIRTEL",
+        "plan_type": "SME",
+        "amount": 600.0,
+        "size": "1.5 GB",
+        "validity": "2 days"
+    },
+    {
+        "id": 387,
+        "network": "AIRTEL",
+        "plan_type": "SME",
+        "amount": 750.0,
+        "size": "2.0 GB",
+        "validity": "2 days"
+    },
+    {
+        "id": 388,
+        "network": "AIRTEL",
+        "plan_type": "SME",
+        "amount": 1514.0,
+        "size": "5.0 GB",
+        "validity": "7 days"
+    },
+    {
+        "id": 397,
+        "network": "AIRTEL",
+        "plan_type": "SME",
+        "amount": 214.0,
+        "size": "600.0 MB",
+        "validity": "2 days"
+    },
+    {
+        "id": 398,
+        "network": "AIRTEL",
+        "plan_type": "SME",
+        "amount": 114.0,
+        "size": "300.0 MB",
+        "validity": "2 days"
+    },
+    {
+        "id": 419,
+        "network": "AIRTEL",
+        "plan_type": "SME",
+        "amount": 550.0,
+        "size": "2.0 GB",
+        "validity": "(1gb 1gb bonus) 1 day"
+    },
+    {
+        "id": 422,
+        "network": "AIRTEL",
+        "plan_type": "SME",
+        "amount": 1000.0,
+        "size": "1.5 GB",
+        "validity": "7"
+    },
+    {
+        "id": 424,
+        "network": "AIRTEL",
+        "plan_type": "SME",
+        "amount": 2000.0,
+        "size": "3.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 426,
+        "network": "AIRTEL",
+        "plan_type": "SME",
+        "amount": 2500.0,
+        "size": "4.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 194,
+        "network": "GLO",
+        "plan_type": "CORPORATE GIFTING",
+        "amount": 415.0,
+        "size": "1.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 195,
+        "network": "GLO",
+        "plan_type": "CORPORATE GIFTING",
+        "amount": 830.0,
+        "size": "2.0 GB",
+        "validity": "30days"
+    },
+    {
+        "id": 196,
+        "network": "GLO",
+        "plan_type": "CORPORATE GIFTING",
+        "amount": 1245.0,
+        "size": "3.0 GB",
+        "validity": "30days"
+    },
+    {
+        "id": 197,
+        "network": "GLO",
+        "plan_type": "CORPORATE GIFTING",
+        "amount": 2075.0,
+        "size": "5.0 GB",
+        "validity": "30days"
+    },
+    {
+        "id": 200,
+        "network": "GLO",
+        "plan_type": "CORPORATE GIFTING",
+        "amount": 4150.0,
+        "size": "10.0 GB",
+        "validity": "30days"
+    },
+    {
+        "id": 203,
+        "network": "GLO",
+        "plan_type": "CORPORATE GIFTING",
+        "amount": 208.0,
+        "size": "500.0 MB",
+        "validity": "30 days"
+    },
+    {
+        "id": 225,
+        "network": "GLO",
+        "plan_type": "CORPORATE GIFTING",
+        "amount": 90.0,
+        "size": "200.0 MB",
+        "validity": "14 days"
+    },
+    {
+        "id": 286,
+        "network": "GLO",
+        "plan_type": "SME",
+        "amount": 187.0,
+        "size": "750.0 MB",
+        "validity": "1 days"
+    },
+    {
+        "id": 288,
+        "network": "GLO",
+        "plan_type": "SME",
+        "amount": 280.0,
+        "size": "1.5 GB",
+        "validity": "1 days"
+    },
+    {
+        "id": 289,
+        "network": "GLO",
+        "plan_type": "SME",
+        "amount": 468.0,
+        "size": "2.5 GB",
+        "validity": "2 days"
+    },
+    {
+        "id": 290,
+        "network": "GLO",
+        "plan_type": "SME",
+        "amount": 1875.0,
+        "size": "10.0 GB",
+        "validity": "7 days"
+    },
+    {
+        "id": 390,
+        "network": "GLO",
+        "plan_type": "CORPORATE GIFTING",
+        "amount": 255.0,
+        "size": "1.0 GB",
+        "validity": "3 days"
+    },
+    {
+        "id": 391,
+        "network": "GLO",
+        "plan_type": "CORPORATE GIFTING",
+        "amount": 765.0,
+        "size": "3.0 GB",
+        "validity": "3 days"
+    },
+    {
+        "id": 392,
+        "network": "GLO",
+        "plan_type": "CORPORATE GIFTING",
+        "amount": 1275.0,
+        "size": "5.0 GB",
+        "validity": "3 days"
+    },
+    {
+        "id": 393,
+        "network": "GLO",
+        "plan_type": "CORPORATE GIFTING",
+        "amount": 294.0,
+        "size": "1.0 GB",
+        "validity": "7 days"
+    },
+    {
+        "id": 394,
+        "network": "GLO",
+        "plan_type": "CORPORATE GIFTING",
+        "amount": 882.0,
+        "size": "3.0 GB",
+        "validity": "7 days"
+    },
+    {
+        "id": 395,
+        "network": "GLO",
+        "plan_type": "CORPORATE GIFTING",
+        "amount": 1470.0,
+        "size": "5.0 GB",
+        "validity": "7 days"
+    },
+    {
+        "id": 215,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 485.0,
+        "size": "1.0 GB",
+        "validity": "+1.5min 1 day"
+    },
+    {
+        "id": 216,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 980.0,
+        "size": "3.2 GB",
+        "validity": "2 days"
+    },
+    {
+        "id": 217,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 2425.0,
+        "size": "6.0 GB",
+        "validity": "7 days"
+    },
+    {
+        "id": 306,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 17460.0,
+        "size": "75.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 307,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 49000.0,
+        "size": "200.0 GB",
+        "validity": "60 days"
+    },
+    {
+        "id": 316,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 727.5,
+        "size": "2.5 GB",
+        "validity": "1 day"
+    },
+    {
+        "id": 317,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 882.0,
+        "size": "2.5 GB",
+        "validity": "2 days"
+    },
+    {
+        "id": 318,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 727.5,
+        "size": "2.0 GB",
+        "validity": "2 days"
+    },
+    {
+        "id": 320,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 98.0,
+        "size": "110.0 MB",
+        "validity": "1 day"
+    },
+    {
+        "id": 321,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 74.0,
+        "size": "75.0 MB",
+        "validity": "1 day"
+    },
+    {
+        "id": 324,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 8820.0,
+        "size": "40.0 GB",
+        "validity": "2 months"
+    },
+    {
+        "id": 326,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 38800.0,
+        "size": "150.0 GB",
+        "validity": "60 days"
+    },
+    {
+        "id": 327,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 24500.0,
+        "size": "90.0 GB",
+        "validity": "2 months"
+    },
+    {
+        "id": 333,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 194.0,
+        "size": "230.0 MB",
+        "validity": "1 day"
+    },
+    {
+        "id": 339,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 2910.0,
+        "size": "6.75 GB",
+        "validity": "(XtraSpecial) 30 days"
+    },
+    {
+        "id": 340,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 4850.0,
+        "size": "14.5 GB",
+        "validity": "(XtraSpecial) 30 days"
+    },
+    {
+        "id": 341,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 728.0,
+        "size": "1.2 GB",
+        "validity": "(On MTN Pulse) 7 days"
+    },
+    {
+        "id": 342,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 776.0,
+        "size": "1.0 GB",
+        "validity": "7 days"
+    },
+    {
+        "id": 344,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 437.0,
+        "size": "750.0 MB",
+        "validity": "(+ Free 1hour TT/YT/IG)3 days"
+    },
+    {
+        "id": 345,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 1455.0,
+        "size": "2.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 346,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 1940.0,
+        "size": "2.7 GB",
+        "validity": "( + 5Minutes)30 days"
+    },
+    {
+        "id": 348,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 6305.0,
+        "size": "16.5 GB",
+        "validity": "(+10 Minutes) 30 days"
+    },
+    {
+        "id": 349,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 5335.0,
+        "size": "12.5 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 351,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 4365.0,
+        "size": "10.0 GB",
+        "validity": "(+10mins+2gb YouTube) 30 days"
+    },
+    {
+        "id": 352,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 10670.0,
+        "size": "36.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 353,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 2425.0,
+        "size": "3.5 GB",
+        "validity": "+5mins +2gb Night data 30 days"
+    },
+    {
+        "id": 354,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 53350.0,
+        "size": "250.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 355,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 33950.0,
+        "size": "165.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 356,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 485.0,
+        "size": "500.0 MB",
+        "validity": "+ 1gb Youtube Night 7 days"
+    },
+    {
+        "id": 359,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 48500.0,
+        "size": "200.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 362,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 1455.0,
+        "size": "1.12 GB",
+        "validity": "+N1500 for call+100SMS 30 days"
+    },
+    {
+        "id": 364,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 582.0,
+        "size": "1.5 GB",
+        "validity": "2 days"
+    },
+    {
+        "id": 365,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 970.0,
+        "size": "1.5 GB",
+        "validity": "7 days"
+    },
+    {
+        "id": 366,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 340.0,
+        "size": "500.0 MB",
+        "validity": "1 days"
+    },
+    {
+        "id": 367,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 582.0,
+        "size": "1.4 GB",
+        "validity": "+7 mins Valid for 2 days"
+    },
+    {
+        "id": 369,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 7275.0,
+        "size": "20.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 370,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 3395.0,
+        "size": "7.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 371,
+        "network": "MTN",
+        "plan_type": "SME2",
+        "amount": 3000.0,
+        "size": "5.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 399,
+        "network": "MTN",
+        "plan_type": "SME2",
+        "amount": 1470.0,
+        "size": "2.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 400,
+        "network": "MTN",
+        "plan_type": "SME2",
+        "amount": 1980.0,
+        "size": "3.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 401,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 1455.0,
+        "size": "3.5 GB",
+        "validity": "7 days"
+    },
+    {
+        "id": 402,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 3395.0,
+        "size": "11.0 GB",
+        "validity": "7 days"
+    },
+    {
+        "id": 403,
+        "network": "MTN",
+        "plan_type": "DATA COUPONS",
+        "amount": 550.0,
+        "size": "1.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 404,
+        "network": "MTN",
+        "plan_type": "DATA COUPONS",
+        "amount": 1100.0,
+        "size": "2.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 405,
+        "network": "MTN",
+        "plan_type": "DATA COUPONS",
+        "amount": 1650.0,
+        "size": "3.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 406,
+        "network": "MTN",
+        "plan_type": "DATA COUPONS",
+        "amount": 2750.0,
+        "size": "5.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 407,
+        "network": "MTN",
+        "plan_type": "DATA COUPONS",
+        "amount": 390.0,
+        "size": "500.0 MB",
+        "validity": "30 days"
+    },
+    {
+        "id": 408,
+        "network": "MTN",
+        "plan_type": "SME2",
+        "amount": 780.0,
+        "size": "1.0 GB",
+        "validity": "7 days"
+    },
+    {
+        "id": 410,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 1455.0,
+        "size": "2.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 416,
+        "network": "MTN",
+        "plan_type": "GIFTING",
+        "amount": 8730.0,
+        "size": "25.0 GB",
+        "validity": "30 days"
+    },
+    {
+        "id": 417,
+        "network": "MTN",
+        "plan_type": "SME2",
+        "amount": 785.0,
+        "size": "1.0 GB",
+        "validity": "30days"
+    },
+    {
+        "id": 418,
+        "network": "MTN",
+        "plan_type": "DATA COUPONS",
+        "amount": 600.0,
+        "size": "1.0 GB",
+        "validity": "30days"
+    },
+    {
+        "id": 420,
+        "network": "MTN",
+        "plan_type": "SME",
+        "amount": 225.0,
+        "size": "1.0 GB",
+        "validity": "1 day"
+    },
+    {
+        "id": 421,
+        "network": "MTN",
+        "plan_type": "SME",
+        "amount": 550.0,
+        "size": "2.5 GB",
+        "validity": "1 day"
+    }
+]
