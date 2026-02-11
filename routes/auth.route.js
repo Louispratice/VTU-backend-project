@@ -44,4 +44,6 @@ router.delete(
   asyncWrapper(authController.deleteUser)
 );
 
+router.get("/profile", authMiddleware, asyncWrapper(authController.getProfile));
+
 export default router;
