@@ -116,6 +116,19 @@ export const changePassword = async (req, res) => {
     res.json({ message: "Password changed successfully" });
 };
 
+export const getProfile = async (req, res) => {
+    const user = await User.findById(req.userId).select("-password");
+    if (!user) return res.status(404).json({ message: "User not found" });
+    res.json({
+        user: {
+            id: user._id,
+            username: user.username,
+            email: user.email,
+            walletBalance: user.walletBalance,
+        },
+    });
+};
+
 export const deleteUser = async (req, res) => {
     await User.findByIdAndDelete(req.userId);
     res.json({ message: "Account deleted" });

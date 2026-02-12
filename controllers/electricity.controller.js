@@ -1,105 +1,81 @@
 import axios from "axios";
+import crypto from "crypto";
 import { User, Transaction } from "../models/user.model.js";
 
-export const buyElectricityController = async (req, res) => {
-  const { userId, meterNumber, amount, provider } = req.body;
+export const purchaseElectricity = async (req, res) => {
+  const { disco_name, mobile_number, amount, meter_number, MeterType } = req.body;
 
+  if (!disco_name || !mobile_number || !amount || !meter_number || !MeterType) {
+    return res.status(400).json({ message: "Disco name, mobile number, amount, meter number, and meter type are required" });
+  }
+
+  // 1. Check User Balance
+  const user = await User.findById(req.userId);
+  if (!user) return res.status(404).json({ message: "User not found" });
+
+  if (user.walletBalance < amount) {
+    return res.status(400).json({ message: "Insufficient wallet balance" });
+  }
+
+  // 2. Call DataStation API
   try {
-    // 1️⃣ Validate input
-    if (!userId || !meterNumber || !amount || !provider) {
-      return res.status(400).json({
-        message: "userId, meterNumber, amount, and provider are required",
-      });
-    }
-
-    // 2️⃣ Find user
-    const user = await User.findById(userId);
-    if (!user) {
-      return res.status(404).json({ message: "User not found" });
-    }
-
-    // 3️⃣ Check balance
-    if (user.walletBalance < amount) {
-      await Transaction.create({
-        userId,
-        type: "electricity",
+    const response = await axios.post(
+      "https://datastationapi.com/api/billpayment/",
+      {
+        disco_name,
         amount,
-        status: "failed",
-        description: "Insufficient balance",
-      });
-
-      return res.status(400).json({ message: "Insufficient balance" });
-    }
-
-    // 4️⃣ Deduct balance (HOLD)
-    user.walletBalance -= amount;
-    await user.save();
-
-    // 5️⃣ Create pending transaction
-    const txn = await Transaction.create({
-      userId,
-      type: "electricity",
-      amount,
-      status: "pending",
-      description: `Processing electricity payment for ${meterNumber}`,
-    });
-
-    // 6️⃣ Call provider API
-    const apiResponse = await axios.post(
-      "https://datastationapi.com/api/eletricity",
-      { meterNumber, amount, provider },
+        meter_number,
+        MeterType,
+        mobile_number
+      },
       {
         headers: {
-          Authorization: "Token 6dc4deabae242ff77c992f7277ba47cbb7c95486 ",
-          "Content-Type": "application/json",
-        },
+          "Authorization": `Token ${process.env.DATASTATION_TOKEN}`,
+          "Content-Type": "application/json"
+        }
       }
     );
 
-    // 7️⃣ Handle success
-    if (apiResponse.data.status === "success") {
-      txn.status = "success";
-      txn.description = "Electricity purchase successful";
-      await txn.save();
-
-      return res.json({
-        message: "Electricity purchase successful",
-        balance: user.walletBalance,
-        data: apiResponse.data,
-      });
-    }
-
-    // 8️⃣ Handle failure → refund
-    user.walletBalance += amount;
+    // 3. If Success, Deduct Balance and Record Transaction
+    const balanceBefore = user.walletBalance;
+    user.walletBalance -= amount;
     await user.save();
 
-    txn.status = "failed";
-    txn.description = "Provider failed — refunded";
-    await txn.save();
-
-    return res.status(400).json({
-      message: "Transaction failed — refunded",
+    const transaction = await Transaction.create({
+      user: req.userId,
+      type: "electricity",
+      amount,
+      status: "success",
+      reference: crypto.randomUUID(),
+      description: `Electricity Bill: ${disco_name} (${meter_number})`,
+      balanceBefore,
+      balanceAfter: user.walletBalance,
     });
+
+    res.json({
+      message: "Electricity purchase successful",
+      data: response.data,
+      transaction
+    });
+
   } catch (error) {
-    console.error(error);
+    console.error("Electricity API Error:", error.response?.data || error.message);
 
-    // Server error → refund
-    if (userId && amount) {
-      await User.findByIdAndUpdate(userId, {
-        $inc: { walletBalance: amount },
-      });
-    }
-
+    // Create a failed transaction record
     await Transaction.create({
-      userId,
+      user: req.userId,
       type: "electricity",
       amount,
       status: "failed",
-      description: "Server error — refunded",
+      reference: crypto.randomUUID(),
+      description: `Failed Electricity Bill: ${disco_name} (${meter_number})`,
+      balanceBefore: user.walletBalance,
+      balanceAfter: user.walletBalance,
     });
 
     res.status(500).json({
-      message: "Something went wrong — refunded",
+      message: "Electricity purchase failed",
+      error: error.response?.data || error.message
     });
   }
 };

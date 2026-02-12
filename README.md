@@ -86,4 +86,28 @@ Your app will crash initially because it needs secrets.
 
 ---
 
+---
 
+## 🤝 How to Merge a Pull Request (GitHub)
+
+Since you've created a **Pull Request (PR)**, here is how to merge it and get the changes back to your computer:
+
+### 1. Merge on GitHub
+1.  Go to your repository on **GitHub**.
+2.  Click the **"Pull requests"** tab.
+3.  Click on your green **"New Pull Request"** (or the specific PR name).
+4.  Scroll down and click the big green **"Merge pull request"** button.
+5.  Click **"Confirm merge"**.
+6.  (Optional) Click **"Delete branch"** if you are done with that feature branch.
+
+### 2. Update Your Local Code
+After merging on GitHub, your computer (local) doesn't know about it yet. Update it using your terminal:
+
+```bash
+# Switch to the main branch
+git checkout main
+
+# Pull the latest changes from GitHub
+git pull origin main
+```
+Now your local code is exactly the same as the code on GitHub! 🔄

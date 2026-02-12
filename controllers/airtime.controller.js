@@ -1,129 +1,80 @@
 import axios from "axios";
+import crypto from "crypto";
 import { User, Transaction } from "../models/user.model.js";
 
-export const AirtimeController = async (req, res) => {
+export const purchaseAirtime = async (req, res) => {
+  const { network_id, phone, amount } = req.body;
+
+  if (!network_id || !phone || !amount) {
+    return res.status(400).json({ message: "Network, phone, and amount are required" });
+  }
+
+  // 1. Check User Balance
+  const user = await User.findById(req.userId);
+  if (!user) return res.status(404).json({ message: "User not found" });
+
+  if (user.walletBalance < amount) {
+    return res.status(400).json({ message: "Insufficient wallet balance" });
+  }
+
+  // 2. Call DataStation API
   try {
-    const { userId, phone, amount } = req.body;
-
-    // ========================
-    // Validate
-    // ========================
-    if (!userId || !phone || !amount) {
-      return res.status(400).json({
-        message: "userId, phone and amount required",
-      });
-    }
-
-    const user = await User.findById(userId);
-
-    if (!user) {
-      return res.status(404).json({ message: "User not found" });
-    }
-
-    // ========================
-    // Check balance
-    // ========================
-    if (user.walletBalance < amount) {
-      await Transaction.create({
-        userId,
-        type: "airtime",
-        amount,
-        status: "failed",
-        description: "Insufficient balance",
-      });
-
-      return res.status(400).json({
-        message: "Insufficient balance",
-      });
-    }
-
-    // ========================
-    // 1️⃣ Deduct first (HOLD)
-    // ========================
-    user.walletBalance -= amount;
-    await user.save();
-
-    // ========================
-    // 2️⃣ Create pending txn
-    // ========================
-    const txn = await Transaction.create({
-      userId,
-      type: "airtime",
-      amount,
-      status: "pending",
-      description: `Processing airtime for ${phone}`,
-    });
-
-    // ========================
-    // 3️⃣ Call provider (NO extra try here)
-    // ========================
     const response = await axios.post(
       "https://datastationapi.com/api/topup/",
       {
-        phone,
-        amount,
+        network: network_id,
+        mobile_number: phone,
+        amount: amount,
+        airtime_type: "VTU"
       },
       {
         headers: {
-          Authorization: "Token YOUR_API_KEY",
-          "Content-Type": "application/json",
-        },
+          "Authorization": `Token ${process.env.DATASTATION_TOKEN}`,
+          "Content-Type": "application/json"
+        }
       }
     );
 
-    const apiResponse = response.data;
-
-    // ========================
-    // SUCCESS
-    // ========================
-    if (apiResponse?.status === "success") {
-      txn.status = "success";
-      txn.description = "Airtime purchase successful";
-      await txn.save();
-
-      return res.json({
-        message: "Airtime purchase successful",
-        balance: user.walletBalance,
-        data: apiResponse,
-      });
-    }
-
-    // ========================
-    // ❌ FAILED → REFUND
-    // ========================
-    user.walletBalance += amount;
+    // 3. If Success, Deduct Balance and Record Transaction
+    const balanceBefore = user.walletBalance;
+    user.walletBalance -= amount;
     await user.save();
 
-    txn.status = "failed";
-    txn.description = "Provider failed — refunded";
-    await txn.save();
+    const transaction = await Transaction.create({
+      user: req.userId,
+      type: "airtime",
+      amount,
+      status: "success",
+      reference: crypto.randomUUID(),
+      description: `Airtime Purchase: ${network_id} (${phone})`,
+      balanceBefore,
+      balanceAfter: user.walletBalance,
+    });
 
-    return res.status(400).json({
-      message: "Transaction failed — refunded",
+    res.json({
+      message: "Airtime purchase successful",
+      data: response.data,
+      transaction
     });
 
   } catch (error) {
-    console.error("Airtime Error:", error);
+    console.error("Airtime API Error:", error.response?.data || error.message);
 
-    const { userId, amount } = req.body;
-
-    // Refund if error
-    if (userId && amount) {
-      await User.findByIdAndUpdate(userId, {
-        $inc: { walletBalance: amount },
-      });
-    }
-
+    // Create a failed transaction record
     await Transaction.create({
-      userId,
+      user: req.userId,
       type: "airtime",
       amount,
       status: "failed",
-      description: "Server error — refunded",
+      reference: crypto.randomUUID(),
+      description: `Failed Airtime Purchase: ${network_id} (${phone})`,
+      balanceBefore: user.walletBalance,
+      balanceAfter: user.walletBalance,
     });
 
-    return res.status(500).json({
-      message: "Something went wrong — refunded",
+    res.status(500).json({
+      message: "Airtime purchase failed",
+      error: error.response?.data || error.message
     });
   }
 };

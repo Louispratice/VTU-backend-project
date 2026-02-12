@@ -7,6 +7,6 @@ const router = express.Router();
 
 router.get("/plans", authMiddleware, asyncWrapper(dataController.getPlans));
 
-router.post("/purchase", authMiddleware, asyncWrapper(dataController.purchase));
+router.post("/purchase", authMiddleware, asyncWrapper(dataController.purchaseData));
 
 export default router;

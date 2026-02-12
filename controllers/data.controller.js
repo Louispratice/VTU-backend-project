@@ -50,7 +50,7 @@ export const purchaseData = async (req, res) => {
             },
             {
                 headers: {
-                    "Authorization": "Token 6dc4deabae242ff77c992f7277ba47cbb7c95486",
+                    "Authorization": `Token ${process.env.DATASTATION_TOKEN}`,
                     "Content-Type": "application/json"
                 }
             }
